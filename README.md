@@ -1,6 +1,6 @@
-# Custom port files
+# Custom macports files
 
-To enable use from the macports _port_(1) shell, do the following:
+To enable use from the macports _port(1)_ shell, do the following:
 
 1. Edit (uncomment) the last line of _/opt/local/etc/macports/sources.conf_ to
    read
@@ -8,6 +8,8 @@ To enable use from the macports _port_(1) shell, do the following:
    ...
    file:///Users/${USERNAME}/ports
 ```
-   see _sources.conf_(1).   
-2. Issue a _portindex_(1) command.
+
+   see _sources.conf(1)_.   
+
+2. Issue a _portindex(1)_ command.
 
