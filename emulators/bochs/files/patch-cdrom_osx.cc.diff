@@ -1,5 +1,5 @@
---- bochs-2.6.8/iodev/hdimage/cdrom_osx.cc.orig	2018-05-09 19:36:27.000000000 +0300
-+++ bochs-2.6.8/iodev/hdimage/cdrom_osx.cc	2018-05-09 19:37:13.000000000 +0300
+--- iodev/hdimage/cdrom_osx.cc.orig	2018-05-09 19:36:27.000000000 +0300
++++ iodev/hdimage/cdrom_osx.cc	2018-05-09 19:37:13.000000000 +0300
 @@ -191,7 +191,7 @@
    mach_port_t port = 0;
    char *devname;

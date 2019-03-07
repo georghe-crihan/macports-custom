@@ -8,12 +8,13 @@ license             LGPL-2.1+
 platforms           darwin
 maintainers         @Nax
 
-description         cross platform x86 and x86_64 emulator
+description         cross platform x86 and x86_64 emulator (fixed)
 
 long_description    Bochs is a highly portable open source x86 and x86_64 \
                     PC emulator written in C++, that runs on most popular \
                     platforms. It emulates the Intel x86 CPU, common I/O \
-                    devices, and a custom BIOS.
+                    devices, and a custom BIOS. \
+                    This version fixes the failing OSX High Sierra build.
 
 homepage            http://bochs.sourceforge.net/
 master_sites        sourceforge
