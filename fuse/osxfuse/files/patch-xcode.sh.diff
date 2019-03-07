@@ -1,0 +1,11 @@
+--- build.d/lib/xcode.sh.orig	2018-08-30 11:03:43.000000000 +0300
++++ build.d/lib/xcode.sh	2018-08-30 11:04:44.000000000 +0300
+@@ -119,7 +119,7 @@
+     do
+         xcode_path="${xcode_app_path}/Contents/Developer"
+         xcode_find_process "${xcode_path}"
+-    done < <(mdfind -onlyin "/Applications" 'kMDItemCFBundleIdentifier == "com.apple.dt.Xcode"')
++    done < <(echo /Applications/Xcode.app)
+ 
+     unset -f xcode_find_is_supported
+     unset -f xcode_find_sdk_add

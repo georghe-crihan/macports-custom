@@ -1,0 +1,29 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+
+name                wdfs
+version             1.4.2
+
+categories          fuse
+maintainers         nomaintainer
+platforms           darwin
+
+license             GPL
+description         WebDAV filesystem for FUSE
+
+long_description    wdfs is a WebDAV filesystem that makes it possible to mount a WebDAV \
+                    share under Linux, FreeBSD and Apple Mac OS X. wdfs has some special \
+                    features for accessing Subversion repositories via WebDAV. It's based \
+                    on FUSE and NEON.
+
+homepage            http://noedler.de/projekte/wdfs/
+
+master_sites        http://noedler.de/projekte/wdfs/
+
+checksums           rmd160  101702c0aaf66c2d2b24ae768a5e910756432c1a \
+                    sha256  fcf2e1584568b07c7f3683a983a9be26fae6534b8109e09167e5dff9114ba2e5 \
+                    size    109315
+
+depends_lib         port:neon
+#                    port:osxfuse

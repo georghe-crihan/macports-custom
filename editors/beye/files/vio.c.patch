@@ -1,0 +1,13 @@
+--- biewlib/sysdep/generic/unix/vio.c.orig	2019-02-24 22:08:23.000000000 +0200
++++ biewlib/sysdep/generic/unix/vio.c	2019-02-24 22:02:16.000000000 +0200
+@@ -25,6 +25,10 @@
+ static const char rcs_id[] = "$Id: vio.c,v 1.16 2009/09/20 14:39:37 nickols_k Exp $";
+ #endif
+ 
++#if defined(__APPLE__) && defined(__MACH__) // Apple OSX and iOS (Darwin)
++#define REAL_UNIX_SYSTEM
++#endif
++
+ #include <stdlib.h>
+ #include <string.h>
+ #include <fcntl.h>

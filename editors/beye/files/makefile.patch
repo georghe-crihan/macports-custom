@@ -1,0 +1,35 @@
+--- makefile.orig	2019-02-24 23:03:49.000000000 +0200
++++ makefile	2019-02-24 23:08:42.000000000 +0200
+@@ -271,16 +271,22 @@
+ 	@echo "*** of this project" 
+ 	@exit 1
+ endif
+-	$(INSTALL) -D -m 755 $(TARGET) $(DESTDIR)$(PREFIX)/bin/$(TARGET)
+-	$(INSTALL) -D -c -m 644 doc/biew.1 $(DESTDIR)$(PREFIX)/man/man1/biew.1
+-	$(INSTALL) -D -c -m 644 bin_rc/biew.hlp $(DESTDIR)$(DATADIR)/biew.hlp
+-	mkdir --parents $(DESTDIR)$(DATADIR)/skn
+-	$(INSTALL) -D -c -m 644 bin_rc/skn/*.skn $(DESTDIR)$(DATADIR)/skn
+-	mkdir --parents $(DESTDIR)$(DATADIR)/syntax
+-	$(INSTALL) -D -c -m 644 bin_rc/syntax/*.stx $(DESTDIR)$(DATADIR)/syntax
+-	mkdir --parents $(DESTDIR)$(DATADIR)/xlt/russian
+-	$(INSTALL) -D -c -m 644 bin_rc/xlt/russian/*.xlt $(DESTDIR)$(DATADIR)/xlt/russian
+-	$(INSTALL) -D -c -m 644 bin_rc/xlt/*.xlt bin_rc/xlt/readme $(DESTDIR)$(DATADIR)/xlt
++	$(INSTALL) -m 755 $(TARGET) $(DESTDIR)$(PREFIX)/bin/$(TARGET)
++	$(INSTALL) -d -m 644 $(DESTDIR)$(PREFIX)/man/man1
++	$(INSTALL) -c -m 644 doc/biew.1 $(DESTDIR)$(PREFIX)/man/man1/biew.1
++	$(INSTALL) -d -m 644 $(DESTDIR)$(DATADIR)
++	$(INSTALL) -c -m 644 bin_rc/biew.hlp $(DESTDIR)$(DATADIR)/biew.hlp
++	mkdir -p $(DESTDIR)$(DATADIR)/skn
++	$(INSTALL) -d -m 644 $(DESTDIR)$(DATADIR)/skn
++	$(INSTALL) -c -m 644 bin_rc/skn/*.skn $(DESTDIR)$(DATADIR)/skn
++	mkdir -p $(DESTDIR)$(DATADIR)/syntax
++	$(INSTALL) -d -m 644 $(DESTDIR)$(DATADIR)/syntax
++	$(INSTALL) -c -m 644 bin_rc/syntax/*.stx $(DESTDIR)$(DATADIR)/syntax
++	mkdir -p $(DESTDIR)$(DATADIR)/xlt/russian
++	$(INSTALL) -d -m 644 $(DESTDIR)$(DATADIR)/xlt/russian
++	$(INSTALL) -c -m 644 bin_rc/xlt/russian/*.xlt $(DESTDIR)$(DATADIR)/xlt/russian
++
++	$(INSTALL) -c -m 644 bin_rc/xlt/*.xlt bin_rc/xlt/readme $(DESTDIR)$(DATADIR)/xlt
+ uninstall:
+ 	$(RM) $(DESTDIR)$(PREFIX)/bin/$(TARGET)
+ 	$(RM) $(DESTDIR)$(DATADIR)/skn/*

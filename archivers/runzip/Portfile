@@ -1,0 +1,32 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+PortGroup           github 1.0
+
+github.setup        vlm zip-fix-filename-encoding 1.4 v
+
+name                runzip
+
+categories          archivers
+maintainers         nomaintainer
+platforms           darwin
+
+license             GPL
+description         Russian filename encoding fix inside ZIP archives
+
+
+long_description    Russian filename encoding fix inside ZIP archives. \
+                    Uses probabilistic approach to detect encodings.
+
+distname            ${github.version}
+
+checksums           rmd160  cbc8d3a7f2c318eb8feadbdeafb7c6f4c37078dc \
+                    sha256  53e329d6e809b469f9571589992b5b35ad00c1092d469865a4531a6384488ec4 \
+                    size    136984
+
+use_autoreconf      yes
+
+configure.env-append LIBS=-liconv
+
+depends_run         port:libiconv
+

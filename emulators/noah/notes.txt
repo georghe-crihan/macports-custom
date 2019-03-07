@@ -1,0 +1,8 @@
+notes "
+    Please codesign ${prefix}/libexec/noah with an appropriate identity and entitlements.plist (it has to be run as root otherwise):
+    sudo /usr/bin/codesign --force --sign <identity> -o library --entitlements ${prefix}/share/${name}/entitlements.plist ${prefix}/libexec/noah
+
+    The perl script to run noah is installed as ${prefix}/bin/noah.
+    It can be used to launch lldb(1) for debugging.
+    Copy the script for editing. ${name} will be overwritten when the port is updated.
+"
