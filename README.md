@@ -1,4 +1,4 @@
-#Custom port files
+# Custom port files
 
 To enable use from the macports _port_(1) shell, do the following:
 
