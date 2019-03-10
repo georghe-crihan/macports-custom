@@ -1,0 +1,43 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+PortGroup           python 1.0
+
+name                py-bs4
+version             0.0.1
+revision            0
+categories-append   devel
+platforms           darwin
+license             Apache-2
+supported_archs     noarch
+
+python.versions     27 34 35 36 37
+
+maintainers         {stromnov @stromnov} openmaintainer
+
+description         Python HTTP for Humans.
+
+long_description    Most existing Python modules for dealing HTTP \
+                    requests are insane. I have to look up everything \
+                    that I want to do. Most of my worst Python \
+                    experiences are a result of the various built-in \
+                    HTTP libraries (yes, even worse than Logging). But \
+                    this one's different. This one's going to be \
+                    awesome. And simple. Really simple.
+
+homepage            http://python-requests.org/
+master_sites        pypi:[string index ${python.rootname} 0]/${python.rootname}
+
+distname            ${python.rootname}-${version}
+
+checksums           rmd160  7d67168f42259e4b5647d1cbf7e0422896354627 \
+                    sha256  36ecea1fd7cc5c0c6e4a1ff075df26d50da647b75376626cc186e2212886dd3a \
+                    size    1121
+
+if {${name} ne ${subport}} {
+    depends_build-append \
+                        port:py${python.version}-setuptools
+    depends_lib-append  port:py${python.version}-beautifulsoup4
+
+    livecheck.type      none
+}
