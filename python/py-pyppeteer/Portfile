@@ -4,7 +4,7 @@ PortSystem          1.0
 PortGroup           python 1.0
 
 name                py-pyppeteer
-version             0.0.25
+version             0.0.21
 revision            0
 categories-append   devel
 platforms           darwin
@@ -30,9 +30,9 @@ master_sites        pypi:[string index ${python.rootname} 0]/${python.rootname}
 
 distname            ${python.rootname}-${version}
 
-checksums           rmd160  6365054d77e83789da0879abc59610359ee42a4b \
-                    sha256  51fe769b722a1718043b74d12c20420f29e0dd9eeea2b66652b7f93a9ad465dd \
-                    size    1188361
+checksums           rmd160  7f9c52eb668745b449b4425a1a1952b114a031b0 \
+                    sha256  3cdad9c51eb1c5b76cb2324a19bc9cdb011955834c752c520c56417f4c6aed0e \
+                    size    1170365
 
 if {${name} ne ${subport}} {
     depends_build-append \
