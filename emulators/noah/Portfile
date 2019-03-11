@@ -36,7 +36,7 @@ if {${subport} eq "noah"} {
 
 } elseif {${subport} eq "noahstrap"} {
 
-    depends_build-append    port:pv \
+    depends_run-append    port:pv \
                             port:gnutar
                             
     github.setup            linux-noah noahstrap 2.0.0
